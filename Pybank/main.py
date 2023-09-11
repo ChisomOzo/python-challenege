@@ -29,7 +29,9 @@ with open(budget_data) as csvfile:
         
     
     greatest_increase1 = max(change_list)
+    #print(greatest_increase1)
     greatest_increase_Pos = change_list.index(greatest_increase1)+1
+    #print(greatest_increase_Pos)
 
     greatest_decrease2 = min(change_list)
     greatest_decrease_Pos = change_list.index(greatest_decrease2)+1
@@ -49,8 +51,8 @@ f"----------------------------\n"
 f"Total Months: {len(months)}\n"
 f"Total: ${sum(net_amount)}\n"
 f"Average Change: ${avg_change}\n"
-f"Greatest Increase in Profits:{months[greatest_increase_Pos][0]} (${greatest_increase1})\n"
-f"Greatest Decrease in Profits: {months[greatest_decrease_Pos][0]}(${greatest_decrease2})"
+f"Greatest Increase in Profits:{months[greatest_increase_Pos]} (${greatest_increase1})\n"
+f"Greatest Decrease in Profits: {months[greatest_decrease_Pos]}(${greatest_decrease2})"
 
 )
 print(output_text)
